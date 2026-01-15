@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15.12-alpine3.21
+    container_name: meu_postgres
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./src/database/database.sql:/docker-entrypoint-initdb.d/database.sql
+      - ./src/database/seed.sql:/docker-entrypoint-initdb.d/seed.sql

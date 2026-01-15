@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+:root{
+  --primary-color: #047857;
+  --text-color: #333333;
+}
+
+body {
+  @apply bg-[var(--background-color)] text-[var(--text-color)];
+}
+
+.bg-primary {
+   @apply bg-[var(--primary-color)];
+}
+.input {
+  @apply w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-colors;
+}
