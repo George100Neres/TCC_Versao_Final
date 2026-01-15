@@ -1,5 +1,3 @@
-CREATE EXTENSION IF NOT EXISTS pgcrypto;
-
 INSERT INTO public.usuario (
   nome,
   telefone,
@@ -13,14 +11,13 @@ INSERT INTO public.usuario (
   cidade,
   estado,
   perfil
-)
-VALUES (
+) VALUES (
   'Administrador do Sistema',
   '61999999999',
   'admin@email.com',
   '123456',
   '70000000',
-  'Sussuarana',
+  'Praça dos Três Poderes',
   '1',
   NULL,
   'Asa Norte',
@@ -29,8 +26,10 @@ VALUES (
   'gestor'
 );
 
-
-INSERT INTO categoria (nome, descricao) VALUES
+-- ===============================
+-- CATEGORIAS
+-- ===============================
+INSERT INTO public.categoria (nome, descricao) VALUES
 ('Coleta Domiciliar', 'Problemas relacionados à coleta comum'),
 ('Entulho e Restos de Obra', 'Resíduos de construção civil'),
 ('Móveis e Volumosos', 'Sofás, colchões, eletrodomésticos'),
@@ -42,9 +41,8 @@ INSERT INTO categoria (nome, descricao) VALUES
 ('Lixo em Encostas', 'Risco de alagamento e deslizamento');
 
 -- ===============================
--- SUBCATEGORIAS — TODAS DE UMA VEZ
+-- SUBCATEGORIAS
 -- ===============================
-
 INSERT INTO public.subcategoria (categoria_id, nome, descricao)
 
 -- Coleta Domiciliar
