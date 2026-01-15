@@ -20,7 +20,7 @@ VALUES (
   'admin@email.com',
   '123456',
   '70000000',
-  'Praça dos Três Poderes',
+  'Sussuarana',
   '1',
   NULL,
   'Asa Norte',
